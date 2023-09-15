@@ -1,0 +1,220 @@
+:root,*{
+    font-family: 'Calibri';
+    --light-blue: rgb(20, 175, 222);
+    --color-raffia:#DCCAA0;
+    --color-pacific-blue:#199cdb;
+    --color-grey:#e6e6e6;
+    --color-darker-grey:#d3d2d2;
+}
+/* .container{
+    width: auto;
+    margin: 0;
+    padding: 0;
+} */
+
+.bg-grey {
+    background: #e6e6e6;
+}
+.bg-darker-grey{
+    background:#d3d2d2;
+}
+ul{
+    list-style-position: inside;
+}
+/* banner */
+#banner{
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+}
+#banner-img{
+    vertical-align: middle;
+    opacity: 0.9;
+    object-fit: cover;
+}
+#banner-text{
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+/* Nav bar*/
+.nav-item{
+    border: 1px rgb(222, 222, 222) solid;
+    border-bottom: none;
+    border-top: none;
+}
+.nav-btn{
+    text-decoration: none;
+    color: #000;
+    
+}
+/* .nav-btn i{ */
+    /* color: var(--icon-color); */
+/* } */
+#personal-profile{
+    border: none;
+}
+
+.text-light-blue{
+    color: var(--light-blue) !important;;
+}
+.bg-light-blue{
+    background-color: var(--light-blue) !important;;
+}
+.text-light-grey{
+    color:grey;
+}
+.indent-blue-rounded::before{
+    content: "\2022";
+    color: var(--light-blue);
+    padding-right: 0.8rem;
+}
+.border-light-blue{
+    border-color: var(--light-blue)!important;
+}
+.skill-item{
+    display: flex;
+    flex-flow: column wrap;
+}
+.skill-level>span{
+    background: rgb(231, 231, 231);
+    display: inline-block;
+    height: 0.15rem;
+    margin-right: 10px;
+    width: 15%;
+    min-width: 2.8rem;
+}
+.skill-level.lv-1>span:first-child{
+    background: var(--light-blue);
+}
+.skill-level.lv-2>span:nth-child(-n+2){
+    background: var(--light-blue);
+}
+.skill-level.lv-3>span {
+    background: var(--light-blue);
+}
+.ico-container{
+    width: 4.4rem;
+}
+.rounded-ico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rounded-ico span{
+    border: 1px #199CDB solid;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+}
+.list-hyphen{
+    list-style-type: none;
+}
+.list-hyphen >li::before{
+    content: "-";
+}
+.border-grey{
+    border-color: var(--color-grey)!important;
+}
+.border-darker-grey{
+    border-color: var(--color-darker-grey)!important;
+}
+.border-raffia{
+    border-color: #DCCAA0!important;
+    /* border-color: yellow!important; */
+}
+.border-left{
+    position: relative;
+}
+.border-left::before{
+    content: "";
+    position: absolute;
+    background-color: var(--color-raffia);
+    width: 0.12rem;
+    height: 90%;
+    transform: translateX(-1rem);
+}
+.project-badge{
+    display: flex;
+    border: 1px var(--border-color) solid;
+    border-bottom: none;
+}
+.project-badge>span{
+    /* padding:2px 5px; */
+    margin: 10px;
+}
+
+.bg-pacific-blue{
+    background-color: #199cdb;
+}
+.project-detail table{
+    border-collapse: collapse;
+}
+.project-detail tr{
+   border: 0.1rem var(--color-darker-grey) solid; 
+   vertical-align: top;
+}
+.project-detail td:first-child{
+    padding:0.1rem;
+    min-width: 4.8rem;
+}
+
+/**Anim**/
+
+.btn--view-more,.btn--view-less {
+    background-color: #F5F6BB;
+    font-size: smaller;
+    width: 30%;
+    margin-top: 1.5rem;
+}
+.btn--view-more::before{
+    content: "▼";
+    transform-origin: center;
+    display: inline-block;
+    transition: transform 0.5s ease-out;
+    transform: rotate(-0.25turn);
+}
+.btn--view-more{
+    transform: scaleX(0) scaleY(0);
+    transform-origin: left top;
+    transition: transform 0.2s linear;
+}
+#job-info > div > div:hover>.btn--view-more:has(+ .d-none){
+    transform: scale(1);
+}
+
+#job-info > div > div:hover>.btn--view-more:has(+ .d-none)::before{
+    transform: rotate(0);
+}
+.btn--view-less::before{
+    content: "▲";
+    transform-origin: center;
+    display: inline-block;
+    transition: transform 0.5s ease-out;
+    transform: rotate(0.25turn);
+}
+
+.btn--view-less{
+    transform: scaleX(0) scaleY(0);
+    transform-origin: left bottom;
+    transition: transform 0.2s linear;
+}
+#job-info > div > div:hover> :not(.d-none) + .btn--view-less{
+    transform: scale(1);
+}
+#job-info > div > div:hover> :not(.d-none) + .btn--view-less::before{
+    transform: rotate(0);
+}

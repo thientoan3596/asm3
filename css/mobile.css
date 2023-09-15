@@ -1,0 +1,34 @@
+@media (max-width:576px){
+    #banner-text {
+        top:25%;
+    }  
+    #banner-img{
+        height: 100%;
+    }
+    #personal-profile{
+        display: none;
+    }
+    .nav-item{
+        border: none!important;
+    }
+    .border-xs-none{
+        border: none!important;
+    }
+    .border-xs-bottom{
+        border-bottom: 0.2rem var(--color-raffia) solid;
+        margin-bottom: 1rem;
+    }
+    
+    @media (max-width:407px){
+        html{
+            font-size: 12px;
+        }
+    } 
+    @media (max-width:305px){
+        html{
+            font-size: 8px;
+        }
+        
+    }
+    
+}

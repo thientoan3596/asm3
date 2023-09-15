@@ -1,0 +1,48 @@
+@media  (min-width:769px){
+   #banner-text{
+    top:50%;
+   } 
+   #banner{
+    height: 45vh;
+   }
+   #banner-img{
+        width: 100%;
+   }
+
+   /* Nav*/
+    #personal-profile{
+        width: 25%;
+        border: none;
+        flex-direction: column;
+    }  
+    #personal-avatar{
+        display: flex!important;
+        position: absolute;
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        overflow:hidden;
+        border: 10px whitesmoke solid;
+    }  
+    @media (max-width:1500px) {
+        .btn--view-more,.btn--view-less {
+            width: 60%!important;
+        }
+    }
+    @media (max-width:1100px) {
+        .btn--view-more,.btn--view-less {
+            width: 100%!important;
+        }
+    }
+    @media (max-width:992px) {
+        #personal-avatar{
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    @media (max-width:1185px) {
+        #banner-img{
+            height: 100%;
+       } 
+    }
+}
